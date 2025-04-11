@@ -12,7 +12,7 @@ impl Command {
             logger: logger,
         }
     }
-    pub fn execute(&self, args: Vec<&str>) {
+    pub fn execute(&self, args: Vec<String>) {
         let mut command = if cfg!(target_os = "windows") {
             let mut cmd = ProcessCommand::new("cmd");
             cmd.arg("/C");
